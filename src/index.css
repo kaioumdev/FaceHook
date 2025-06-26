@@ -1,99 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
-@import "tailwindcss";
+ @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+ @import "tailwindcss";
 
-/* Custom theme configuration */
-@layer base {
-  :root {
-    --color-lwsGreen: #00D991;
-    --color-deepDark: #17181C;
-    --color-mediumDark: #1E1F24;
-    --color-lighterDark: #27292F;
-  }
-
-  body {
-    font-family: 'Inter', sans-serif;
-  }
-}
-
-@layer utilities {
-  .bg-lwsGreen {
-    background-color: var(--color-lwsGreen);
-  }
-
-  .bg-deepDark {
-    background-color: var(--color-deepDark);
-  }
-
-  .bg-mediumDark {
-    background-color: var(--color-mediumDark);
-  }
-
-  .bg-lighterDark {
-    background-color: var(--color-lighterDark);
-  }
-
-  .text-lwsGreen {
-    color: var(--color-lwsGreen);
-  }
-
-  .text-deepDark {
-    color: var(--color-deepDark);
-  }
-
-  .text-mediumDark {
-    color: var(--color-mediumDark);
-  }
-
-  .text-lighterDark {
-    color: var(--color-lighterDark);
-  }
-}
-
-@layer base {
-  body {
-    @apply bg-deepDark font-inter text-gray-100;
-  }
-}
-
-@layer components {
-  .flex-center {
-    @apply flex items-center justify-center;
-  }
-
-  .btn-primary {
-    @apply flex-center gap-2 rounded-md bg-lighterDark px-5 py-2.5 text-sm font-medium text-white hover:bg-deepDark lg:text-lg;
-  }
-
-  .icon-btn {
-    @apply flex-center rounded-md bg-lighterDark p-1.5 font-medium text-white hover:bg-deepDark;
-  }
-
-  .card {
-    @apply rounded-md border border-[#3F3F3F] bg-mediumDark px-4 py-4 lg:px-7 lg:py-5;
-  }
-
-  .form-control {
-    @apply mb-6 space-y-2.5;
-  }
-
-  .auth-label {
-    @apply leading-[138%] lg:text-lg;
-  }
-
-  .auth-input {
-    @apply w-full rounded-md border border-[#CCCCCC]/[14%] bg-lighterDark p-1.5 focus:outline-none lg:p-3;
-  }
-
-  .post-avater {
-    @apply max-w-10 max-h-10 rounded-full lg:max-h-[58px] lg:max-w-[58px]
-  }
-
-  /* Action Modal */
-  .action-modal-container {
-    @apply card absolute right-full top-6 min-w-[200px] divide-y divide-[#3F3F3F] py-2 [&>button]:py-2
-  }
-
-  .action-menu-item {
-    @apply flex w-full items-center gap-2 text-gray-100 transition-all
-  }
-}
+ @theme {
+   --font-inter: "Inter", "sans-serif";
+   --breakpoint-3xl: 120rem;
+   --color-lwsGreen: "#00D991";
+   --color-deepDark: "#17181C";
+   --color-mediumDark: "#1E1F24";
+   --color-lighterDark: "#27292F";
+ }
