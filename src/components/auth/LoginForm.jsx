@@ -3,14 +3,18 @@ import React from 'react'
 import { useForm } from 'react-hook-form'
 import Field from '../common/Field';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../../hooks/useAuth';
 
 const LoginForm = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const navigate = useNavigate();
+    const { setAuth } = useAuth();
 
     const submitForm = (formData) => {
         console.log(formData);
-        navigate("/")
+        const user = { ...formData };
+        setAuth({ user });
+        navigate("/");
     }
     return (
         <form className='border-b border-[#3F3F3F] pb-10 lg:pb-[60px]' onSubmit={handleSubmit(submitForm)}>
