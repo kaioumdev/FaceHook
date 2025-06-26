@@ -1,10 +1,14 @@
+import { Route, Routes } from "react-router-dom"
+import HomePage from "./pages/HomePage"
 
 
 function App() {
 
   return (
     <>
-      <h1 className="text-red-400">Welcome to vite with Tailwindcss and React</h1>
+      <Routes>
+        <Route element={<HomePage></HomePage>} path="" exact></Route>
+      </Routes>
     </>
   )
 }
