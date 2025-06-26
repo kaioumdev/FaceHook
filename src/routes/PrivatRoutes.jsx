@@ -8,7 +8,7 @@ const PrivatRoutes = () => {
         <>
             {
                 auth.user ? (<main className="mx-auto max-w-[1020px] py-8">
-                    <div className="container">
+                    <div className='mb-6 space-y-2.5'>
                         <Outlet></Outlet>
                     </div>
                 </main>) : (<Navigate to="/login"></Navigate>)
