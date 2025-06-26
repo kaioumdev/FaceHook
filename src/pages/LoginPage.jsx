@@ -23,7 +23,7 @@ const LoginPage = () => {
                             </p>
                         </div>
                     </div>
-                    <div className="card">
+                    <div className="rounded-md border border-[#3F3F3F] bg-[#1E1F24] px-4 py-4 lg:px-7 lg:py-5">
                         <LoginForm></LoginForm>
                         {/* <form className="border-b border-[#3F3F3F] pb-10 lg:pb-[60px]">
                             <div className="form-control">
@@ -55,7 +55,7 @@ const LoginPage = () => {
                             <p className="text-center text-xs text-gray-600/95 lg:text-sm">
                                 Don’t have account?
                                 <Link
-                                    className="text-white transition-all hover:text-lwsGreen hover:underline"
+                                    className="text-white transition-all hover:text-[#00D991] hover:underline"
                                     to="/registar"
                                 >Create New</Link>
                             </p>
