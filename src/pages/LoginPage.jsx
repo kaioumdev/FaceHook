@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import AuthIllustration from "../assets/images/auth_illustration.png";
+import LoginForm from "../components/auth/LoginForm";
 
 const LoginPage = () => {
     return (
@@ -23,6 +24,7 @@ const LoginPage = () => {
                         </div>
                     </div>
                     <div className="card">
+                        <LoginForm></LoginForm>
                         {/* <form className="border-b border-[#3F3F3F] pb-10 lg:pb-[60px]">
                             <div className="form-control">
                                 <label className="auth-label" for="email">Email</label>
