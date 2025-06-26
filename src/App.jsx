@@ -1,13 +1,19 @@
 import { Route, Routes } from "react-router-dom"
 import HomePage from "./pages/HomePage"
 import LoginPage from "./pages/LoginPage"
+import ProfilePage from "./pages/ProfilePage"
+import RegistrationPage from "./pages/RegistrationPage"
+import NotFount from "./pages/NotFount"
 
 function App() {
   return (
     <>
       <Routes>
         <Route element={<HomePage></HomePage>} path="" exact></Route>
-        <Route element={<LoginPage></LoginPage>}></Route>
+        <Route element={<LoginPage></LoginPage>} path="/login"></Route>
+        <Route element={<ProfilePage></ProfilePage>} path="/me"></Route>
+        <Route element={<RegistrationPage></RegistrationPage>} path="/register"></Route>
+        <Route element={<NotFount></NotFount>} path="*"></Route>
       </Routes>
     </>
   )
